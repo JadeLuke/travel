@@ -1,0 +1,27 @@
+<div class="favourites-page">
+    <h1>Your Favourite Countries</h1>
+    
+    <div *ngIf="favouritedCountries.length === 0">
+      <p>No countries have been liked yet.</p>
+    </div>
+  
+    <div class="main flex flex-wrap">
+      <div *ngFor="let item of favouritedCountries" class="max-w-sm bg-white shadow rounded-lg m-auto mt-20 cards">
+        <div class="p-5">
+          <div class="countries">
+            <div class="images flex">
+              <div class="flags">
+                <img [src]="item.flags.png" alt="{{ item?.name.common }}" />
+              </div>
+              <div class="names">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                  {{ item?.name.common }} ({{ item?.region }})
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

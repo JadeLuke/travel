@@ -1,0 +1,36 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-size: 50px;
+    font-family: system-ui,sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #000;
+    --g:conic-gradient(#000 0 0) no-repeat text;
+    background: var(--g) 0,var(--g) 100%,var(--g) 0 0,var(--g) 0 100%;
+    animation: l5 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%); /* Firefox */
+    -ms-transform: translate(-50%, -50%);  /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Safari and Chrome*/
+    -o-transform: translate(-50%, -50%); /* Opera */
+    transform: translate(-50%, -50%);
+  
+  
+  }
+  .loader:before {
+    content: "Loading country";
+  }
+  @keyframes l5 {
+    0%,100%{background-size: 0   100%,0   100%,100% 0  ,100% 0  }
+    50%    {background-size: 55% 100%,55% 100%,100% 0  ,100% 0  }
+    50.01% {background-size: 0   100%,0   100%,100% 55%,100% 55%}
+  }
+  .block{
+    /* border: solid red; */
+    /* height: 20vh; */
+    height: 986px;
+  }
